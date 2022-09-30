@@ -5,9 +5,40 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+
+function tenNames(user) {
+  let returnval = '';
+  for (let i = 0; i < 10; i++) {
+     returnval += user.firstName + ' ' + user.lastName + '';
+  }
+  return returnval
+}
+
+const user = {
+  firstName: 'Harper',
+  lastName: 'Perez'
+};
+
+const functionalElement = (
+  <h1>Hello {tenNames(user)}!</h1>
+)
+
+function Element(props) {
+  return (
+    <h1>Hello {props.name}!</h1>
+  )
+}
+
+const element = <Element name="Bob"/>
+
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    {element}
   </React.StrictMode>
 );
 
