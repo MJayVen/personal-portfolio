@@ -19,8 +19,8 @@ function tenNames(user) {
 }
 
 const user = {
-  firstName: 'Harper',
-  lastName: 'Perez'
+  firstName: 'meee',
+  lastName: 'mooo'
 };
 
 const functionalElement = (
